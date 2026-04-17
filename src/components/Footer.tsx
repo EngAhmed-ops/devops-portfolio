@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { CONTACT } from '../data/portfolio';
 
 export const Footer = () => {
@@ -16,11 +16,7 @@ export const Footer = () => {
       url: CONTACT.social.linkedin,
       icon: Linkedin,
     },
-    {
-      name: 'Twitter',
-      url: CONTACT.social.twitter,
-      icon: Twitter,
-    },
+
     {
       name: 'Email',
       url: `mailto:${CONTACT.email}`,
