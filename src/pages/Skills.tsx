@@ -119,7 +119,7 @@ export const Skills = () => {
           const skill = SKILLS_BY_CATEGORY.cloud.find(s => s.name.toLowerCase() === skillName) ||
                        SKILLS_BY_CATEGORY.containers.find(s => s.name.toLowerCase() === skillName) ||
                        SKILLS_BY_CATEGORY.infrastructure.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.devops.find(s => s.name.toLowerCase() === skillName) ||
+                       SKILLS_BY_CATEGORY.devops.find(s => s.name.toLowerCase() === skillName) 
 
 
           if (skill) {
