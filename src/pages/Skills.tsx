@@ -120,8 +120,7 @@ export const Skills = () => {
                        SKILLS_BY_CATEGORY.containers.find(s => s.name.toLowerCase() === skillName) ||
                        SKILLS_BY_CATEGORY.infrastructure.find(s => s.name.toLowerCase() === skillName) ||
                        SKILLS_BY_CATEGORY.devops.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.development.find(s => s.name.toLowerCase() === skillName) ||
-                       SKILLS_BY_CATEGORY.database.find(s => s.name.toLowerCase() === skillName);
+
 
           if (skill) {
             output = [
@@ -173,7 +172,7 @@ export const Skills = () => {
               Technical Expertise
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Comprehensive skill set spanning cloud infrastructure, development, and DevOps practices
+             Skill set spanning cloud infrastructure and DevOps practices
             </p>
           </motion.div>
 
