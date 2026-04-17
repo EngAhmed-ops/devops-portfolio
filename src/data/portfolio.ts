@@ -1,6 +1,6 @@
-export const HERO_CONTENT = "Building scalable systems from code to cloud. Cloud & DevOps Engineer . Passionate about automating deployments, optimizing cloud infrastructure, and help developing robust applications with modern technologies.";
+export const HERO_CONTENT = "Building scalable systems from code to cloud. Passionate about automating deployments, optimizing cloud infrastructure, and help developing robust applications with modern technologies.";
 
-export const ABOUT_TEXT = "I design, automate, and deploy systems that turn code into production-grade reality. my foundations as a computer engineer evolved into a passion for DevOps and Cloud Engineering. For me, DevOps isn't just about speed—it's about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
+export const ABOUT_TEXT = "I design, automate, and deploy systems that turn code into production-grade reality. my foundations as a computer and networks engineering student evolved into a passion for DevOps and Cloud Engineering. For me, DevOps isn't just about speed—it's about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
 
 export const SKILLS = [
   // Cloud
