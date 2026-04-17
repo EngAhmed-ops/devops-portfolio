@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import { Grid3DBackground } from '../components/Grid3D';
 import { Typewriter } from '../components/Typewriter';
-import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
+// تم مسح PROJECTS لأنها غير مستخدمة
+import { HERO_CONTENT, SKILLS } from '../data/portfolio';
 
 export const Home = () => {
- 
-
   const featuredSkills = SKILLS.slice(0, 6);
+  
+  // قمنا بتعريف مصفوفة الإحصائيات لحل الخطأ (يمكنك تعديل الأرقام)
+  const stats = [
+    { label: "Years Experience", value: "2+" },
+    { label: "Projects Completed", value: "10+" },
+    { label: "Technologies", value: "15+" },
+    { label: "Certifications", value: "3" },
+  ];
 
   return (
     <div className="min-h-screen bg-bg-page relative overflow-hidden">
@@ -193,7 +200,7 @@ export const Home = () => {
                 Start a Project
               </Link>
               <a
-                href="https://github.com/neerajnakka"
+                href="https://github.com/YOUR_GITHUB_USERNAME" // <-- لا تنسَ تعديل هذا الرابط
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-neutral-600 text-neutral-200 hover:border-primary-500 hover:text-primary-500 font-semibold rounded-lg transition-all duration-200"
