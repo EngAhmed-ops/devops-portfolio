@@ -39,20 +39,7 @@ export const Skills = () => {
       skills: SKILLS_BY_CATEGORY.devops,
       color: 'text-green-500',
     },
-    {
-      id: 'development',
-      title: 'Development Stack',
-      icon: Code,
-      skills: SKILLS_BY_CATEGORY.development,
-      color: 'text-orange-500',
-    },
-    {
-      id: 'database',
-      title: 'Databases',
-      icon: Database,
-      skills: SKILLS_BY_CATEGORY.database,
-      color: 'text-red-500',
-    },
+  
   ];
 
   const commands = {
