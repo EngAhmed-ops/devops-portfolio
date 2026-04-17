@@ -1,6 +1,6 @@
-export const HERO_CONTENT = "Building scalable systems from code to cloud. DevOps & Cloud Engineer | Full-Stack Developer. Passionate about automating deployments, optimizing cloud infrastructure, and developing robust web applications with modern technologies.";
+export const HERO_CONTENT = "Building scalable systems from code to cloud. Cloud & DevOps Engineer . Passionate about automating deployments, optimizing cloud infrastructure, and help developing robust applications with modern technologies.";
 
-export const ABOUT_TEXT = "I design, automate, and deploy systems that turn code into production-grade reality. My journey began with full-stack development—building web apps with Java, React, and Node.js. Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments. I work across AWS and OCI, orchestrate containers with Docker and Kubernetes, and define infrastructure with Terraform, Ansible, and CloudFormation. Behind the command line, I'm equally comfortable in version control and workflow automation, using Git, GitHub, GitLab CI/CD, CodePipeline, and Bash scripting to bridge collaboration and delivery. For me, DevOps isn't just about speed—it's about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
+export const ABOUT_TEXT = "I design, automate, and deploy systems that turn code into production-grade reality. my foundations as a computer engineer evolved into a passion for DevOps and Cloud Engineering. For me, DevOps isn't just about speed—it's about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
 
 export const SKILLS = [
   // Cloud
@@ -26,33 +26,9 @@ export const SKILLS = [
 ];
 
 export const PROJECTS = [
-  {
-    title: 'Amazon Clone — EKS & ArgoCD Deployment',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Deployed a production-grade Amazon Clone on AWS EKS with full GitOps automation via ArgoCD. Integrated CI/CD pipelines using GitHub Actions, containerized microservices with Docker, and managed configuration using Kustomize for seamless auto-sync deployments.',
-    technologies: ['AWS EKS', 'Kubernetes', 'ArgoCD', 'GitHub Actions', 'Kustomize', 'Docker', 'Terraform'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka/amazon-clone-k8s-eks-argoCD',
-    websiteLink: '',
-  },
-  {
-    title: 'Next.js CI/CD Pipeline with Docker & Kubernetes',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Developed and containerized a Next.js application, deploying it to Kubernetes clusters using GitHub Actions for automated CI/CD. Implemented multi-stage Docker builds, health probes, resource limits, and rolling updates for high availability.',
-    technologies: ['Next.js', 'Docker', 'Kubernetes', 'GitHub Actions', 'GHCR'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka/nextjs-docker-kubernetes-app',
-    websiteLink: '',
-  },
-  {
-    title: 'Realtime Chat App — MERN + Socket.IO',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Developed a real-time chat application using the MERN stack with Socket.IO for instant communication. Implemented custom hooks and Zustand for efficient state management. Dockerized for deployment.',
-    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.IO', 'Zustand', 'Docker'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/Mern_ChatApp',
-    websiteLink: 'https://mern-chatapp-rfj5.onrender.com/',
-  },
+  
+    
+  
   {
     title: 'Cloud Infrastructure Automation',
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
@@ -61,44 +37,20 @@ export const PROJECTS = [
     category: 'devops',
     githubLink: 'https://github.com/neerajnakka',
     websiteLink: '',
-  },
-  {
-    title: 'Netflix Clone using React',
-    image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Built a Netflix clone with React, Tailwind CSS, and Firebase. Integrated React Router for seamless navigation and Firebase for authentication.',
-    technologies: ['React', 'Tailwind CSS', 'Firebase'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/NetflixReact_Clone',
-    websiteLink: 'https://netflix-clone-wi5g.onrender.com/',
-  },
-  {
-    title: 'Modern Portfolio with 3D Animations',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Designed and developed a modern portfolio website featuring smooth animations, 3D effects powered by Three.js, and a sleek user interface. Leveraged Tailwind CSS for responsive design, React for dynamic interactivity, and Zustand for state management. The site incorporates Framer Motion for fluid transitions.',
-    technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'HTML', 'CSS'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/Neeraj_Portfolio',
-    websiteLink: 'https://neerajnakka.onrender.com/',
-  },
-  {
-    title: 'Portfolio Website',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Dynamic React portfolio showcasing projects with Tailwind CSS design and Framer Motion animations.',
-    technologies: ['Tailwind CSS', 'React.js', 'React Router Dom', 'Framer Motion'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/PortFolio_React/tree/master',
-    websiteLink: 'https://neerajchandra.onrender.com/',
-  },
+  }
+  
+
+
 ];
 
 export const CONTACT = {
-  address: 'Hyderabad, Telangana, India',
-  phoneNo: '+91 9000600559',
-  email: 'neerajnakka.n@gmail.com',
+  address: 'Khartoum, Sudan',
+  phoneNo: '+249990911994',
+  email: 'ahmedcloudeng@gmail.com',
   social: {
-    github: 'https://github.com/neerajnakka',
-    linkedin: 'https://linkedin.com/in/neerajchandran',
-    twitter: 'https://twitter.com/neerajnakka',
+    github: 'https://github.com/EngAhmed-ops',
+    linkedin: 'https://linkedin.com/in/neerajchandran'
+    
   }
 };
 
