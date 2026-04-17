@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import { Grid3DBackground } from '../components/Grid3D';
 import { Typewriter } from '../components/Typewriter';
-// تم مسح PROJECTS لأنها غير مستخدمة
 import { HERO_CONTENT, SKILLS } from '../data/portfolio';
 
 export const Home = () => {
   const featuredSkills = SKILLS.slice(0, 6);
   
- 
+  // الحل هنا: قمنا بتعريف الإحصائيات حتى لا يظهر خطأ في السطر 86
+  const stats = [
+    { label: "Years Experience", value: "2+" },
+    { label: "Projects Completed", value: "10+" },
+    { label: "Technologies", value: "15+" },
+    { label: "Certifications", value: "3" },
+  ];
 
   return (
     <div className="min-h-screen bg-bg-page relative overflow-hidden">
