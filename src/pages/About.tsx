@@ -1,9 +1,27 @@
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
-import { Calendar, MapPin, Code, Zap } from 'lucide-react';
+import { MapPin, Code, Zap } from 'lucide-react';
 
-
+export const About = () => {
+  // أضفت هذه المصفوفة لأن الكود بالأسفل يبحث عنها لإنشاء الـ Timeline
+  // يمكنك تعديل محتواها ببياناتك الحقيقية
+  const timeline = [
+    {
+      year: '2023 - Present',
+      title: 'Cloud & DevOps Engineer',
+      company: 'Your Company',
+      description: 'Building cloud-native solutions and automating CI/CD pipelines.',
+      icon: Code
+    },
+    {
+      year: '2021 - 2023',
+      title: 'Full-Stack Developer',
+      company: 'Previous Company',
+      description: 'Developed scalable web applications and transitioned into infrastructure.',
+      icon: Zap
+    }
+  ];
 
   const philosophyPoints = [
     {
@@ -57,10 +75,9 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
                   />
                   <p>
                     I design, automate, and deploy systems that turn code into production-grade reality. 
-                    
                   </p>
                   <p>
-                    my foundation as a computer and network engineering student evolved into a passion for DevOps and Cloud Engineering.
+                    My foundation as a computer and network engineering student evolved into a passion for DevOps and Cloud Engineering.
                   </p>
                   <p className="text-primary-500 font-medium">
                     For me, Cloud and DevOps isn't just about speed—it's about precision, repeatability, 
@@ -78,9 +95,6 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
               viewport={{ once: true }}
               className="lg:col-span-5 space-y-6"
             >
-              
-                   
-
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
                   Specializations
