@@ -3,23 +3,7 @@ import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
 import { Calendar, MapPin, Code, Zap } from 'lucide-react';
 
-export const About = () => {
-  const timeline = [
-    {
-      year: '2023 - Present',
-      title: 'Freelance DevOps & Cloud Engineer',
-      company: 'Self-Employed',
-      description:
-        'Working on freelance projects focusing on cloud automation, CI/CD, and container orchestration using AWS, Docker, and Kubernetes.',
-      icon: Code,},
-    {
-      year: '2019 - 2023',
-      title: 'Computer Science Graduate',
-      company: 'CVR College Of Engineering',
-      description: 'Bachelor\'s degree with focus on software engineering and cloud computing.',
-      icon: Calendar,
-    },
-  ];
+
 
   const philosophyPoints = [
     {
@@ -67,26 +51,19 @@ export const About = () => {
                 </div>
                 <div className="space-y-4 text-neutral-200 leading-relaxed">
                   <Typewriter
-                    text="Hello, I'm Neeraj Chandra Nakka, and I turn code into production reality."
+                    text="Hello, I'm Ahmed Esmat, and I turn code into production reality."
                     delay={30}
                     className="text-primary-500 font-semibold block mb-4"
                   />
                   <p>
                     I design, automate, and deploy systems that turn code into production-grade reality. 
-                    My journey began with full-stack development—building web apps with Java, React, and Node.js.
+                    
                   </p>
                   <p>
-                    Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, 
-                    where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments.
-                  </p>
-                  <p>
-                    I work across AWS and Azure, orchestrate containers with Docker and Kubernetes, 
-                    and define infrastructure with Terraform and automation scripts. Behind the command line, 
-                    I'm equally comfortable in version control and workflow automation, using Git, GitHub, 
-                    and GitLab CI/CD to bridge collaboration and delivery.
+                    my foundation as a computer and network engineering student evolved into a passion for DevOps and Cloud Engineering.
                   </p>
                   <p className="text-primary-500 font-medium">
-                    For me, DevOps isn't just about speed—it's about precision, repeatability, 
+                    For me, Cloud and DevOps isn't just about speed—it's about precision, repeatability, 
                     and creating systems that empower developers to ship confidently and innovate faster.
                   </p>
                 </div>
@@ -101,29 +78,8 @@ export const About = () => {
               viewport={{ once: true }}
               className="lg:col-span-5 space-y-6"
             >
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-                  Quick Stats
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Experience</span>
-                    <span className="text-primary-500 font-mono">1+ years</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Cloud Platforms</span>
-                    <span className="text-primary-500 font-mono">AWS, Azure</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Projects</span>
-                    <span className="text-primary-500 font-mono">7+ deployed</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Technologies</span>
-                    <span className="text-primary-500 font-mono">19+ mastered</span>
-                  </div>
-                </div>
-              </div>
+              
+                   
 
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
