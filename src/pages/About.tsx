@@ -3,7 +3,7 @@ import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
 import { MapPin, Code, Zap } from 'lucide-react';
 
-
+export const About = () => {
   const philosophyPoints = [
     {
       icon: Zap,
@@ -95,10 +95,6 @@ import { MapPin, Code, Zap } from 'lucide-react';
           </div>
         </div>
       </section>
-
-     
-           
-                 
 
       {/* Philosophy Section */}
       <section className="py-24">
