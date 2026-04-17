@@ -6,12 +6,7 @@ import { Typewriter } from '../components/Typewriter';
 import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
 
 export const Home = () => {
-  const stats = [
-    { label: 'Years Experience', value: '1+' },
-    { label: 'Cloud Platforms', value: '3' },
-    { label: 'Projects Completed', value: '10+' },
-    { label: 'Technologies', value: '19+' },
-  ];
+ 
 
   const featuredSkills = SKILLS.slice(0, 6);
 
@@ -32,12 +27,12 @@ export const Home = () => {
             {/* Terminal prompt */}
             <div className="font-mono text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">
               <span className="text-accent-500 mr-3">$</span>
-              <span className="text-primary-500">whoami</span>
+              <span className="text-primary-500">AHMED ESMAT OMER EISA</span>
             </div>
 
             {/* Typewriter heading */}
             <div className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-primary-500">
-              <Typewriter text="DevOps & Cloud Engineer" delay={80} />
+              <Typewriter text="Aspiring Cloud & DevOps Engineer" delay={80} />
               <span className="terminal-cursor ml-2" />
             </div>
 
@@ -123,9 +118,7 @@ export const Home = () => {
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
               Featured Technologies
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
-              A curated selection of the technologies I work with daily to build and deploy scalable systems
-            </p>
+            
           </motion.div>
 
           <motion.div
