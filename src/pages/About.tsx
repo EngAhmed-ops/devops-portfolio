@@ -3,25 +3,6 @@ import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
 import { MapPin, Code, Zap } from 'lucide-react';
 
-export const About = () => {
-  // أضفت هذه المصفوفة لأن الكود بالأسفل يبحث عنها لإنشاء الـ Timeline
-  // يمكنك تعديل محتواها ببياناتك الحقيقية
-  const timeline = [
-    {
-      year: '2023 - Present',
-      title: 'Cloud & DevOps Engineer',
-      company: 'Your Company',
-      description: 'Building cloud-native solutions and automating CI/CD pipelines.',
-      icon: Code
-    },
-    {
-      year: '2021 - 2023',
-      title: 'Full-Stack Developer',
-      company: 'Previous Company',
-      description: 'Developed scalable web applications and transitioned into infrastructure.',
-      icon: Zap
-    }
-  ];
 
   const philosophyPoints = [
     {
@@ -80,7 +61,7 @@ export const About = () => {
                     My foundation as a computer and network engineering student evolved into a passion for DevOps and Cloud Engineering.
                   </p>
                   <p className="text-primary-500 font-medium">
-                    For me, Cloud and DevOps isn't just about speed—it's about precision, repeatability, 
+                    For me, Cloud and DevOps aren't just about speed—it's about precision, repeatability, 
                     and creating systems that empower developers to ship confidently and innovate faster.
                   </p>
                 </div>
@@ -115,65 +96,9 @@ export const About = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-24 bg-bg-surface/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-              Career Timeline
-            </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
-              My journey from full-stack development to DevOps engineering
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-primary-700 to-transparent" />
-
-            <div className="space-y-12">
-              {timeline.map((item, index) => {
-                const IconComponent = item.icon;
-                const isEven = index % 2 === 0;
-                
-                return (
-                  <motion.div
-                    key={item.year}
-                    initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className={`relative flex items-center ${
-                      isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Timeline dot */}
-                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center border-4 border-bg-page shadow-glow z-10">
-                      <IconComponent size={16} className="text-bg-surface" />
-                    </div>
-
-                    {/* Content */}
-                    <div className={`ml-16 md:ml-0 md:w-1/2 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-                      <div className="bg-bg-elevated border border-neutral-700 rounded-lg p-6 hover:border-primary-500/50 transition-colors shadow-card">
-                        <div className="font-mono text-accent-500 text-sm mb-2">{item.year}</div>
-                        <h3 className="font-semibold text-xl text-neutral-200 mb-1">{item.title}</h3>
-                        <div className="text-primary-500 font-medium mb-3">{item.company}</div>
-                        <p className="text-neutral-400 text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
+     
+           
+                 
 
       {/* Philosophy Section */}
       <section className="py-24">
