@@ -142,7 +142,7 @@ export const Skills = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="ls -la skills/"
-        description="Exploring technical expertise across cloud, development, and DevOps domains"
+        description="Exploring technical expertise across cloud and DevOps domains"
       />
 
       {/* Skills Categories */}
