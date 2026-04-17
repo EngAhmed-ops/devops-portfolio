@@ -22,7 +22,7 @@ export const Projects = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="docker ps -a"
-        description="Listing deployed projects and applications"
+        description="Listing deployed projects "
       />
 
       {/* Filter Tabs */}
