@@ -10,10 +10,10 @@ export const Home = () => {
   
   // الحل هنا: قمنا بتعريف الإحصائيات حتى لا يظهر خطأ في السطر 86
   const stats = [
-    { label: "Years Experience", value: "2+" },
-    { label: "Projects Completed", value: "10+" },
-    { label: "Technologies", value: "15+" },
-    { label: "Certifications", value: "3" },
+    { label: "Years Experience", value: "0" },
+    { label: "Projects Completed", value: "3" },
+    { label: "Technologies", value: "8" },
+    { label: "Certifications", value: "7" },
   ];
 
   return (
