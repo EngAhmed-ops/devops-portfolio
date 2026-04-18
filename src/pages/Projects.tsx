@@ -5,13 +5,20 @@ import { ExternalLink, Github, Filter } from 'lucide-react';
 import { PROJECTS_BY_CATEGORY } from '../data/portfolio';
 
 export const Projects = () => {
- 
+  // تمت إضافة هذه الدالة لأن الكود بالأسفل يحتاجها لجلب المشاريع
+  const getProjects = () => {
+    // يمكنك تعديل هذا الجزء ليناسب طريقة جلب البيانات الخاصة بك
+    return Array.isArray(PROJECTS_BY_CATEGORY) 
+      ? PROJECTS_BY_CATEGORY 
+      : Object.values(PROJECTS_BY_CATEGORY).flat();
+  };
 
- 
+  return (
+    <div className="min-h-screen bg-bg-page">
       {/* Terminal Header */}
       <TerminalHeader
         command="docker ps -a"
-        description="Listing deployed projects "
+        description="Listing deployed projects"
       />
 
       {/* Projects Grid */}
@@ -38,9 +45,8 @@ export const Projects = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-surface via-transparent to-transparent opacity-60" />
-                  
-                
-                
+                </div> {/* ← تم إصلاح الخطأ الأول هنا بإضافة قفلة الـ div */}
+
                 {/* Project Content */}
                 <div className="p-6 space-y-4">
                   {/* Title */}
@@ -55,7 +61,7 @@ export const Projects = () => {
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((tech) => (
+                    {project.technologies?.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
                         className="px-2 py-1 bg-neutral-800 text-neutral-300 text-xs rounded border border-neutral-700 hover:border-primary-500/30 transition-colors"
@@ -63,7 +69,7 @@ export const Projects = () => {
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 4 && (
+                    {project.technologies?.length > 4 && (
                       <span className="px-2 py-1 bg-neutral-800 text-neutral-400 text-xs rounded border border-neutral-700">
                         +{project.technologies.length - 4} more
                       </span>
@@ -72,15 +78,17 @@ export const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex items-center space-x-4 pt-4">
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-neutral-400 hover:text-primary-500 transition-colors group/btn"
-                    >
-                      <Github size={16} className="group-hover/btn:scale-110 transition-transform" />
-                      <span className="text-sm font-mono">Code</span>
-                    </a>
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-neutral-400 hover:text-primary-500 transition-colors group/btn"
+                      >
+                        <Github size={16} className="group-hover/btn:scale-110 transition-transform" />
+                        <span className="text-sm font-mono">Code</span>
+                      </a>
+                    )}
                     
                     {project.websiteLink && (
                       <a
@@ -112,13 +120,6 @@ export const Projects = () => {
           )}
         </div>
       </section>
-
-     
-               
-                 
-
-              
-
-     
-               
-
+    </div>
+  ); // ← تم إصلاح الخطأ الثاني هنا بإضافة الإغلاقات الصحيحة
+};
