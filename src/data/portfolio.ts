@@ -37,7 +37,7 @@ export const CONTACT = {
   email: 'ahmedcloudeng@gmail.com',
   social: {
     github: 'https://github.com/EngAhmed-ops',
-    linkedin: 'https://linkedin.com/in/neerajchandran'
+    linkedin: 'https://www.linkedin.com/in/ahmed-eisa-37791a373'
     
   }
 };
