@@ -25,23 +25,11 @@ export const SKILLS = [
 
 ];
 
-export const PROJECTS = [
-  
-    
-  
-  {
-    title: 'Cloud Infrastructure Automation',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Automated AWS infrastructure provisioning using Terraform with reusable modules for EC2, VPC, and S3. Integrated CI/CD with GitHub Actions for continuous deployment of cloud environments.',
-    technologies: ['AWS', 'Terraform', 'GitHub Actions', 'EC2', 'S3'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka',
-    websiteLink: '',
-  }
+
   
 
 
-];
+
 
 export const CONTACT = {
   address: 'Khartoum, Sudan',
