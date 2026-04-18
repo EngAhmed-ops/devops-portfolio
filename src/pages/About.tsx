@@ -61,7 +61,7 @@ export const About = () => {
                     My foundation as a computer and network engineering student evolved into a passion for DevOps and Cloud Engineering.
                   </p>
                   <p className="text-primary-500 font-medium">
-                    For me, Cloud and DevOps aren't just about speed—it's about precision, repeatability, 
+                    For me, Cloud and DevOps aren't just about speed—they are about precision, repeatability, 
                     and creating systems that empower developers to ship confidently and innovate faster.
                   </p>
                 </div>
