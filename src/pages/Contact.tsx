@@ -1,14 +1,9 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
-import { Typewriter } from '../components/Typewriter';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, ExternalLink, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { CONTACT } from '../data/portfolio';
 
-
- 
-
-
+export const Contact = () => {
   const contactMethods = [
     {
       icon: Mail,
@@ -46,7 +41,6 @@ import { CONTACT } from '../data/portfolio';
       icon: Linkedin,
       color: 'hover:text-blue-500',
     },
-   
   ];
 
   return (
@@ -58,182 +52,43 @@ import { CONTACT } from '../data/portfolio';
       />
 
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="lg:col-span-7"
-            >
-              <div className="bg-bg-surface border border-neutral-700 rounded-xl p-8 shadow-card">
-                <div className="mb-8">
-                  <h2 className="font-mono text-2xl font-bold text-primary-500 mb-4">
-                    Send Message
-                  </h2>
-                  <div className="font-mono text-sm text-accent-500">
-                    <span>$</span>
-                    <span className="text-primary-500 ml-2">cat message_template.txt</span>
-                  </div>
-                </div>
-
-                {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
-                    <CheckCircle size={64} className="text-primary-500 mx-auto mb-4" />
-                    <h3 className="font-mono text-xl font-semibold text-primary-500 mb-2">
-                      Message Sent Successfully!
-                    </h3>
-                    <Typewriter
-                      text="> Message delivered. Expect response within 24 hours."
-                      delay={50}
-                      className="text-neutral-400 text-sm"
-                    />
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Name Field */}
-                    <div>
-                      <label className="block font-mono text-sm text-accent-500 mb-2">
-                        <span className="text-primary-500 mr-2">&gt;</span>
-                        name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className={`w-full bg-bg-elevated border ${errors.name ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="Your full name"
-                      />
-                      {errors.name && (
-                        <p className="text-red-500 text-sm mt-2">{errors.name}</p>
-                      )}
-                    </div>
-
-                    {/* Email Field */}
-                    <div>
-                      <label className="block font-mono text-sm text-accent-500 mb-2">
-                        <span className="text-primary-500 mr-2">&gt;</span>
-                        email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={`w-full bg-bg-elevated border ${errors.email ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="your.email@example.com"
-                      />
-                      {errors.email && (
-                        <p className="text-red-500 text-sm mt-2">{errors.email}</p>
-                      )}
-                    </div>
-
-                    {/* Subject Field */}
-                    <div>
-                      <label className="block font-mono text-sm text-accent-500 mb-2">
-                        <span className="text-primary-500 mr-2">&gt;</span>
-                        subject
-                      </label>
-                      <input
-                        type="text"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className={`w-full bg-bg-elevated border ${errors.subject ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="What's this about?"
-                      />
-                      {errors.subject && (
-                        <p className="text-red-500 text-sm mt-2">{errors.subject}</p>
-                      )}
-                    </div>
-
-                    {/* Message Field */}
-                    <div>
-                      <label className="block font-mono text-sm text-accent-500 mb-2">
-                        <span className="text-primary-500 mr-2">&gt;</span>
-                        message
-                      </label>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={6}
-                        className={`w-full bg-bg-elevated border ${errors.message ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none`}
-                        placeholder="Tell me about your project or inquiry..."
-                      />
-                      {errors.message && (
-                        <p className="text-red-500 text-sm mt-2">{errors.message}</p>
-                      )}
-                    </div>
-
-                    {/* Submit Button */}
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className={`w-full py-4 px-6 rounded-lg font-mono font-bold text-lg transition-all duration-200 ${
-                        isSubmitting
-                          ? 'bg-neutral-700 text-neutral-400 cursor-not-allowed'
-                          : 'bg-primary-500 text-bg-surface hover:bg-primary-700 shadow-glow hover:shadow-card-hover'
-                      }`}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            {/* Contact Methods */}
+            <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-8 shadow-card hover:border-primary-500/50 transition-colors duration-300">
+              <h3 className="font-mono text-2xl font-bold text-primary-500 mb-8 text-center">
+                Get In Touch
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {contactMethods.map((method) => {
+                  const IconComponent = method.icon;
+                  return (
+                    <a 
+                      key={method.label} 
+                      href={method.href}
+                      className="flex flex-col items-center p-6 bg-bg-surface rounded-lg hover:scale-105 transition-transform duration-300 border border-neutral-800 hover:border-neutral-600"
                     >
-                      {isSubmitting ? (
-                        <div className="flex items-center justify-center space-x-2">
-                          <div className="w-5 h-5 border-2 border-neutral-400 border-t-transparent rounded-full animate-spin" />
-                          <span>SENDING...</span>
-                        </div>
-                      ) : (
-                        <div className="flex items-center justify-center space-x-2">
-                          <Send size={20} />
-                          <span>[ SEND MESSAGE ]</span>
-                        </div>
-                      )}
-                    </button>
-                  </form>
-                )}
-              </div>
-            </motion.div>
-
-            {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5 space-y-8"
-            >
-              {/* Contact Methods */}
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
-                  Contact Methods
-                </h3>
-                <div className="space-y-4">
-                  {contactMethods.map((method) => {
-                    const IconComponent = method.icon;
-                    return (
-                      <div key={method.label} className="flex items-center space-x-4">
-                        <div className={`p-3 bg-bg-surface rounded-lg ${method.color}`}>
-                          <IconComponent size={20} />
-                        </div>
-                        <div>
-                          <div className="font-medium text-neutral-200">{method.label}</div>
-                          <div className="text-sm text-neutral-400">{method.value}</div>
-                        </div>
+                      <div className={`p-4 bg-bg-elevated rounded-full mb-4 ${method.color}`}>
+                        <IconComponent size={24} />
                       </div>
-                    );
-                  })}
-                </div>
+                      <div className="font-medium text-neutral-200 mb-2">{method.label}</div>
+                      <div className="text-sm text-neutral-400 text-center break-all">{method.value}</div>
+                    </a>
+                  );
+                })}
               </div>
+            </div>
 
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Availability Status */}
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
+              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6 shadow-card hover:border-primary-500/50 transition-colors duration-300">
+                <h3 className="font-mono text-lg font-bold text-primary-500 mb-6">
                   Availability Status
                 </h3>
                 <div className="space-y-4">
@@ -243,17 +98,18 @@ import { CONTACT } from '../data/portfolio';
                   </div>
                   <div className="text-sm text-neutral-400">
                     <div className="mb-2">Response time: Within 24 hours</div>
-                    <div>Time zone: IST (UTC+5:30)</div>
+                    {/* يمكنك تغيير المنطقة الزمنية هنا إذا أردت */}
+                    <div>Time zone: CAT (UTC+2:00)</div> 
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
+              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6 shadow-card hover:border-primary-500/50 transition-colors duration-300">
+                <h3 className="font-mono text-lg font-bold text-primary-500 mb-6">
                   Connect With Me
                 </h3>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   {socialLinks.map((link) => {
                     const IconComponent = link.icon;
                     return (
@@ -262,29 +118,29 @@ import { CONTACT } from '../data/portfolio';
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex flex-col items-center p-4 bg-bg-surface rounded-lg text-neutral-400 ${link.color} transition-all duration-200 hover:scale-105 hover:shadow-card`}
+                        className={`flex flex-col items-center p-4 bg-bg-surface rounded-lg text-neutral-400 border border-neutral-800 ${link.color} transition-all duration-200 hover:scale-105 hover:shadow-card hover:border-neutral-600`}
                       >
                         <IconComponent size={24} className="mb-2" />
-                        <span className="text-xs font-mono">{link.name}</span>
+                        <span className="text-sm font-mono">{link.name}</span>
                       </a>
                     );
                   })}
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Terminal-style footer message */}
-      <section className="py-24 bg-bg-elevated">
+      <section className="pb-24 bg-bg-page">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-bg-surface border border-neutral-700 rounded-xl p-8 font-mono"
+            className="bg-bg-surface border border-neutral-700 rounded-xl p-8 font-mono shadow-card"
           >
             <div className="text-accent-500 mb-4">
               $ echo "Thank you for visiting!"
@@ -298,7 +154,7 @@ import { CONTACT } from '../data/portfolio';
             <div className="mt-6 pt-4 border-t border-neutral-700 text-sm text-neutral-400">
               <div className="flex items-center justify-center space-x-2">
                 <ExternalLink size={16} />
-                <span>Connection established. Awaiting your message...</span>
+                <span>Connection established. Looking forward to hearing from you!</span>
               </div>
             </div>
           </motion.div>
