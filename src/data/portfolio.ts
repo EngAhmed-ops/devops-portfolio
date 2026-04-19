@@ -29,7 +29,7 @@ export const PROJECTS = [
   {
     title: 'Cloud Infrastructure Automation',
     image: '',
-    description: 'Automated AWS infrastructure provisioning using Terraform with reusable modules for EC2, VPC, and S3. Integrated CI/CD with GitHub Actions for continuous deployment of cloud environments.',
+    description: 'Automated AWS infrastructure provisioning using Terraform with reusable modules for EC2.',
     technologies: ['AWS', 'Terraform', 'EC2'],
     category: '',
     githubLink: 'https://github.com/EngAhmed-ops/project-1',
@@ -46,7 +46,7 @@ export const PROJECTS = [
   },{
   title: 'Kubernetes game project',
     image: '',
-    description: '',
+    description: 'Deploying the 2048 game using kubernetes and aws eks',
     technologies: ['AWS EKS', 'EC2', 'Docker'],
     category: '',
     githubLink: 'https://github.com/EngAhmed-ops/Kubernetes-game-project-',
